@@ -1,0 +1,126 @@
+{
+  "workflow_version": "1.2.0",
+  "timestamps": {
+    "started": "2026-03-10T09:54:02.499931+02:00",
+    "last_updated": "2026-03-10T10:01:36.204984+02:00",
+    "completed": "2026-03-10T10:01:36.204984+02:00"
+  },
+  "mode": "initial_scan",
+  "scan_level": "deep",
+  "project_root": "f:\\DEVS\\Django\\API\\api_v3",
+  "project_knowledge": "f:\\DEVS\\Django\\API\\api_v3\\docs",
+  "completed_steps": [
+    {
+      "step": "step_1",
+      "status": "completed",
+      "timestamp": "2026-03-10T09:55:23.711570+02:00",
+      "summary": "Classified as monolith with 1 part"
+    },
+    {
+      "step": "step_2",
+      "status": "completed",
+      "timestamp": "2026-03-10T09:56:19.868059+02:00",
+      "summary": "Found 1 existing docs"
+    },
+    {
+      "step": "step_3",
+      "status": "completed",
+      "timestamp": "2026-03-10T09:58:13.893994+02:00",
+      "summary": "Tech stack: Django/DRF on Python with PostgreSQL, Celery, Redis, Channels"
+    },
+    {
+      "step": "step_4",
+      "status": "completed",
+      "timestamp": "2026-03-10T10:01:36.204984+02:00",
+      "summary": "Conditional analysis complete, API + data models documented"
+    },
+    {
+      "step": "step_5",
+      "status": "completed",
+      "timestamp": "2026-03-10T10:01:36.204984+02:00",
+      "summary": "Source tree analysis written"
+    },
+    {
+      "step": "step_9",
+      "status": "completed",
+      "timestamp": "2026-03-10T10:01:36.204984+02:00",
+      "summary": "Supporting docs written"
+    },
+    {
+      "step": "step_10",
+      "status": "completed",
+      "timestamp": "2026-03-10T10:01:36.204984+02:00",
+      "summary": "Master index generated"
+    },
+    {
+      "step": "step_11",
+      "status": "completed",
+      "timestamp": "2026-03-10T10:01:36.204984+02:00",
+      "summary": "Validation complete (files exist, no missing markers)"
+    },
+    {
+      "step": "step_12",
+      "status": "completed",
+      "timestamp": "2026-03-10T10:01:36.204984+02:00",
+      "summary": "Workflow complete"
+    }
+  ],
+  "current_step": "completed",
+  "findings": {
+    "project_classification": {
+      "repository_type": "monolith",
+      "parts_count": 1,
+      "primary_tech": "Django (Python)"
+    },
+    "existing_docs": [
+      {
+        "path": "PROJECT_CONTEXT.md",
+        "type": "project_context",
+        "part_id": "backend"
+      }
+    ],
+    "user_context": "none",
+    "technology_stack": {
+      "part_id": "backend",
+      "language": "Python",
+      "framework": "Django",
+      "api": "Django REST Framework",
+      "db": "PostgreSQL",
+      "async": [
+        "Celery",
+        "django-celery-beat",
+        "django_celery_results"
+      ],
+      "realtime": [
+        "Django Channels",
+        "channels_redis"
+      ],
+      "auth": [
+        "SimpleJWT",
+        "custom cookie JWT auth"
+      ],
+      "cache": [
+        "Redis (django-redis)"
+      ]
+    }
+  },
+  "outputs_generated": [
+    "api-contracts-backend.md",
+    "architecture-backend.md",
+    "data-models-backend.md",
+    "deployment-guide.md",
+    "development-guide-backend.md",
+    "index.md",
+    "project-overview.md",
+    "project-scan-report.json",
+    "source-tree-analysis.md"
+  ],
+  "resume_instructions": "Starting from step 1",
+  "project_types": [
+    {
+      "part_id": "backend",
+      "project_type_id": "backend",
+      "display_name": "Backend API (Django)"
+    }
+  ]
+}

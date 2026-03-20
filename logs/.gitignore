@@ -1,0 +1,7 @@
+# Ignorer les fichiers de logs mais conserver ce répertoire dans git
+*.log
+*.log.*
+
+# Conserver ce fichier et .gitkeep
+!.gitignore
+!.gitkeep

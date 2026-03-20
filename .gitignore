@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+
+# Environnements Virtuels
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Configuration IDE & AI
+.vscode/
+.idea/
+.windsurf/
+_bmad/
+_bmad-output/
+
+# Logs et documents parasites
+output.txt
+task.md
+*.docx
+*.zip
