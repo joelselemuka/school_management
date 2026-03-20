@@ -197,6 +197,11 @@ ALLOWED_HOSTS = config(
     cast=lambda v: [s.strip() for s in v.split(",")]
 )
 
+# Indique à Django qu'il est derrière un proxy HTTPS (Render)
+# Cela répare les URL Swagger générées en `http://` qui bloquaient l'affichage (Mixed Content)
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
+
 
 
 # SPECTACULAR_SETTINGS : configuration dans config/settings/swagger.py
