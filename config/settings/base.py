@@ -210,3 +210,9 @@ from .pagination import (  # Pagination par défaut
 
 # Merge pagination into existing REST_FRAMEWORK without overwriting schema config.
 REST_FRAMEWORK.update(_PAGINATION_REST_FRAMEWORK)
+
+# ====== RENDER GRATUIT ======
+# Si aucun worker Celery n'est payé/disponible, on exécute les tâches en direct.
+# Vous pourrez mettre USE_CELERY_WORKER=True dans Render si vous passez en Pro.
+if not config('USE_CELERY_WORKER', default=False, cast=bool):
+    CELERY_TASK_ALWAYS_EAGER = True
