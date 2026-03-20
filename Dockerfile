@@ -23,11 +23,8 @@ RUN pip install gunicorn uvicorn # Serveur production performant
 # Copie tout le reste de votre code
 COPY . /app/
 
-# Collecte des fichiers statiques (indispensable pour que Swagger/DRF ait un design)
-RUN SECRET_KEY="dummy_key_for_build" python manage.py collectstatic --noinput
-
 # Port utilisé par Render
 EXPOSE 8000
 
-# Lance les migrations et démarre le serveur ASGI (Gunicorn avec workers Uvicorn)
-CMD ["sh", "-c", "python manage.py migrate --noinput && gunicorn config.asgi:application -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000"]
+# Lance la collecte dynamique, les migrations et le serveur
+CMD ["sh", "-c", "python manage.py collectstatic --noinput && python manage.py migrate --noinput && gunicorn config.asgi:application -k uvicorn.workers.UvicornWorker --bind 0.0.0.0:8000"]
